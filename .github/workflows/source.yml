@@ -11,6 +11,6 @@ jobs:
       test-var: "Hello from root"
   call-subdir-reusable:
     name:  Call Reusable Workflow in Sub Directory
-    uses: ./.github/workflows/subdir-reusable.yml
+    uses: ./.github/workflows/reusable-workflows/subdir-reusable.yml
     with:
       test-var: "Hello from Sub Directory"
