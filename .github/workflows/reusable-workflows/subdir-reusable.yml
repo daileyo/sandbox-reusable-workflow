@@ -1,0 +1,20 @@
+name: Base Reusable Workflow
+
+
+on:
+  workflow_call:
+    inputs:
+      test-var:
+        required: true
+        type: string
+
+jobs:
+  print-result:
+    name: Print Results from Base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Variable and directory
+        shell: bash
+        run: |
+          echo "${{ inputs.test-var }}"
+          find .
